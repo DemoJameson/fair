@@ -169,7 +169,7 @@ mixin FairCompiler {
         }
         if (content.isEmpty) {
           var errorLog = await File(path.join('build', 'fair', 'log',
-                  '${DateFormat('yyyy-MM-dd_HH:mm:sss').format(DateTime.now())}.txt'))
+                  '${DateFormat('yyyy-MM-dd_HH_mm_sss').format(DateTime.now())}.txt'))
               .create(recursive: true);
           var f = await errorLog.open(mode: FileMode.append);
           await f.writeString(output);
